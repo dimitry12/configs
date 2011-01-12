@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/dimitry/Desk/aa/projects/instapage/system/application/views/site'
+let g:netrw_dirhist_2='/home/dimitry/Desk/aa/projects/instapage/system/application/views/site/main'
+let g:netrw_dirhist_3='/home/dimitry/Desk/aa/projects/instapage/system/application/views/server/page/blocks'
+let g:netrw_dirhist_4='/home/dimitry/Desk/aa/repos/spiders'
