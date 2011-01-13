@@ -37,3 +37,5 @@ set numberwidth=3
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 colo xoria256
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
