@@ -2,6 +2,7 @@ packages:
   darwin:
     macports:
       - neovim
+      - tmux
   shell_installs:
     uv:
       command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
