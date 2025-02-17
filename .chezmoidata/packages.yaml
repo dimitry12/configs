@@ -11,3 +11,8 @@ packages:
     - ttok
     - files-to-prompt
     - strip-tags
+  llm_plugins:
+    - llm-ollama
+    - llm-gemini
+    - llm-anthropic
+    - llm-deepseek

@@ -28,3 +28,12 @@ echo "Installing UV package {{ . }}..."
 uv tool install {{ . }}
 {{ end -}}
 {{ end -}}
+
+# LLM plugin installations
+{{ if .packages.llm_plugins -}}
+# Install LLM plugins
+{{ range .packages.llm_plugins -}}
+echo "Installing LLM plugin {{ . }}..."
+llm install {{ . }}
+{{ end -}}
+{{ end -}}
