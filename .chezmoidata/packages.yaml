@@ -3,6 +3,10 @@ packages:
     macports:
       - neovim
       - tmux
+  linux:
+    ubuntu:
+      - neovim
+      - tmux
   shell_installs:
     uv:
       command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
