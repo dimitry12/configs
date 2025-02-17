@@ -3,7 +3,7 @@
 # Platform-specific package installation
 {{ if eq .chezmoi.os "darwin" -}}
 # Update MacPorts
-sudo port selfupdate
+# sudo port selfupdate
 
 # Install declared packages
 {{ range .packages.darwin.macports -}}
