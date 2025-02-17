@@ -1,0 +1,11 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Update MacPorts
+sudo port selfupdate
+
+# Install declared packages
+{{ range .packages.darwin.macports -}}
+sudo port install {{ . | quote }}
+{{ end -}}
+{{ end -}}
