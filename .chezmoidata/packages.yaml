@@ -2,7 +2,6 @@ packages:
   darwin:
     macports:
       - neovim
-    curl_installs:
-      uv:
-        url: "https://astral.sh/uv/install.sh"
-        checksum: "" # We'll let curl verify HTTPS
+  shell_installs:
+    uv:
+      command: "curl -LsSf https://astral.sh/uv/install.sh | sh"

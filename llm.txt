@@ -13,3 +13,9 @@ Key aspects:
 - Enables version control of settings
 - Facilitates easy setup on new systems
 - Maintains consistency across different machines
+
+# PACKAGE MANAGEMENT
+
+The repository uses a declarative approach to manage package installation:
+- MacPorts packages for macOS-specific tools
+- Shell-based installations for cross-platform tools

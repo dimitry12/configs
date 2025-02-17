@@ -1,9 +1,9 @@
 #!/bin/bash
 
-{{ if .packages.darwin.curl_installs -}}
-# Install packages that use curl installation scripts
-{{ range $name, $install := .packages.darwin.curl_installs -}}
+{{ if .packages.shell_installs -}}
+# Install packages that use shell commands
+{{ range $name, $install := .packages.shell_installs -}}
 echo "Installing {{ $name }}..."
-curl -LsSf {{ $install.url | quote }} | sh
+{{ $install.command }}
 {{ end -}}
 {{ end -}}
