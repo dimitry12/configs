@@ -1,0 +1,5 @@
+# INTRO
+
+IMPORTANT: This file contains summaries of main mechanics of code, data, and logic contained in this repository.
+This document is about the "why" and the intent behind code, data, and logic.
+It MUST be updated any time there is a change in or addition to functionality.
