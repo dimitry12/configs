@@ -2,6 +2,10 @@
 
 # Platform-specific package installation
 {{ if eq .chezmoi.os "darwin" -}}
+# Install declared packages
+{{ range .packages.darwin.macports -}}
+sudo port install {{ . | quote }}
+{{ end -}}
 {{ else if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "ubuntu") -}}
 # Update package lists
 sudo apt update
@@ -11,8 +15,6 @@ sudo apt update
 sudo apt install -y {{ . | quote }}
 {{ end -}}
 {{ end -}}
-
-{{ if eq .chezmoi.os "darwin" -}}
 # Update MacPorts
 # sudo port selfupdate
 
