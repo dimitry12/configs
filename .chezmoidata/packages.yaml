@@ -11,6 +11,7 @@ packages:
     - ttok
     - files-to-prompt
     - strip-tags
+    - aider-chat@latest
   llm_plugins:
     - llm-ollama
     - llm-gemini
