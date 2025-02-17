@@ -1,9 +1,0 @@
-#!/bin/bash
-
-{{ if .packages.shell_installs -}}
-# Install packages that use shell commands
-{{ range $name, $install := .packages.shell_installs -}}
-echo "Installing {{ $name }}..."
-{{ $install.command }}
-{{ end -}}
-{{ end -}}
