@@ -19,3 +19,12 @@ echo "Installing {{ $name }}..."
 {{ $install.command }}
 {{ end -}}
 {{ end -}}
+
+# UV tool package installations
+{{ if .packages.uv_tool -}}
+# Install UV tool packages
+{{ range .packages.uv_tool -}}
+echo "Installing UV package {{ . }}..."
+uv tool install {{ . }}
+{{ end -}}
+{{ end -}}

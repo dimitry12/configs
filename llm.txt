@@ -19,3 +19,4 @@ Key aspects:
 The repository uses a declarative approach to manage package installation through a unified script:
 - Platform-specific package managers (e.g., MacPorts on macOS)
 - Cross-platform shell-based installations that work on any supported system
+- UV tool package installations for Python packages

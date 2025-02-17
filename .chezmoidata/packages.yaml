@@ -5,3 +5,9 @@ packages:
   shell_installs:
     uv:
       command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
+  uv_tool:
+    - llm
+    - shot-scraper
+    - ttok
+    - files-to-prompt
+    - strip-tags
