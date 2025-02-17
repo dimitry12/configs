@@ -16,6 +16,6 @@ Key aspects:
 
 # PACKAGE MANAGEMENT
 
-The repository uses a declarative approach to manage package installation:
-- MacPorts packages for macOS-specific tools
-- Shell-based installations for cross-platform tools
+The repository uses a declarative approach to manage package installation through a unified script:
+- Platform-specific package managers (e.g., MacPorts on macOS)
+- Cross-platform shell-based installations that work on any supported system

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Platform-specific package installation
+{{ if eq .chezmoi.os "darwin" -}}
+# Update MacPorts
+sudo port selfupdate
+
+# Install declared packages
+{{ range .packages.darwin.macports -}}
+sudo port install {{ . | quote }}
+{{ end -}}
+{{ end -}}
+
+# Cross-platform shell-based installations
+{{ if .packages.shell_installs -}}
+# Install packages that use shell commands
+{{ range $name, $install := .packages.shell_installs -}}
+echo "Installing {{ $name }}..."
+{{ $install.command }}
+{{ end -}}
+{{ end -}}
