@@ -21,3 +21,4 @@ The repository uses a declarative approach to manage package installation throug
 - Cross-platform shell-based installations that work on any supported system
 - UV tool package installations for Python packages
 - LLM plugin installations for extending LLM functionality
+- Tmux Plugin Manager (TPM) for managing tmux plugins
