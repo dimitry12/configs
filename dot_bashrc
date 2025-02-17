@@ -72,17 +72,6 @@ cdnvm() {
 alias cd='cdnvm'
 cdnvm "$PWD" || exit
 
-# Aliases for Github Copilot CLI
-function ??() {
-  gh copilot suggest -t shell "$1"
-}
-function gh?() {
-  gh copilot suggest -t gh "$1"
-}
-function git?() {
-  gh copilot suggest -t git "$1"
-}
-
 # for docker and gcloud
 export PATH="/usr/local/bin:/Users/dzmitry/google-cloud-sdk/bin:$PATH"
 
