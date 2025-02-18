@@ -222,4 +222,8 @@ nvm use default
 
 # Created by `pipx` on 2024-06-16 16:22:58
 export PATH="$PATH:/home/dzmitry/.local/bin"
+
+export UV_PYTHON="3.12"
+export UV_PYTHON_PREFERENCE="only-managed"
+export UV_CACHE_DIR="$HOME/Desktop/uv_cache" # to make sure cache and code-folders are on the same file system
 {{ end }}
