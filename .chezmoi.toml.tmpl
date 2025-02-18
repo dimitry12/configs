@@ -1,0 +1,6 @@
+{{- $anthropic_api_key := promptStringOnce . "anthropic_api_key" "anthropic_api_key" -}}
+{{- $deepseek_api_key := promptStringOnce . "deepseek_api_key" "deepseek_api_key" -}}
+
+[data]
+  anthropic_api_key = {{ $anthropic_api_key | quote }}
+  deepseek_api_key = {{ $deepseek_api_key | quote }}
