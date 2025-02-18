@@ -7,6 +7,9 @@ packages:
     ubuntu:
       - neovim
       - tmux
+      - fd-find
+      - ripgrep
+      - fzf
   shell_installs:
     uv:
       command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
