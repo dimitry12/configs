@@ -10,6 +10,9 @@
 sudo port install {{ . | quote }}
 {{ end -}}
 {{ else if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "ubuntu") -}}
+# Add repos
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
 # Update package lists
 sudo apt update
 
