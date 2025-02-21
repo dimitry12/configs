@@ -3,6 +3,24 @@ packages:
     macports:
       - neovim
       - tmux
+  termux:
+    - git
+    - fzf
+    - ripgrep
+    - clang # needed by lazyvim?
+    - neovim
+    - tmux
+    - rust
+    - python
+    - uv
+    - alacritty
+    - kitty
+    - libxkbcommon
+    - libcanberra
+    - xdotool
+    - wget
+    - cmake
+    - build-essential
   linux:
     ubuntu:
       - neovim
@@ -10,9 +28,9 @@ packages:
       - fd-find
       - ripgrep
       - fzf
-  shell_installs:
-    uv:
-      command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
+    shell_installs:
+      uv:
+        command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
   uv_tool:
     - llm
     - shot-scraper

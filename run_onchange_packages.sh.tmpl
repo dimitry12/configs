@@ -1,18 +1,32 @@
-#!/bin/bash
+#!{{ lookPath "bash" }}
 
 # Platform-specific package installation
+
+{{ if eq .chezmoi.os "android" -}}
+
+# Install declared packages
+{{ range .packages.termux -}}
+pkg install {{ . | quote }}
+{{ end -}}
+
+{{ end -}}
+
 {{ if eq .chezmoi.os "darwin" -}}
+
 # Update MacPorts
 # sudo port selfupdate
-#
+
 # Install declared packages
 {{ range .packages.darwin.macports -}}
 sudo port install {{ . | quote }}
 {{ end -}}
-{{ else if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "ubuntu") -}}
+
+{{ end -}}
+
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "ubuntu") -}}
+
 # Add repos
 sudo add-apt-repository ppa:neovim-ppa/unstable
-
 # Update package lists
 sudo apt update
 
@@ -20,16 +34,16 @@ sudo apt update
 {{ range .packages.linux.ubuntu -}}
 sudo apt install -y {{ . | quote }}
 {{ end -}}
-{{ end -}}
 
-# Cross-platform shell-based installations
-{{ if .packages.shell_installs -}}
 # Install packages that use shell commands
-{{ range $name, $install := .packages.shell_installs -}}
+{{ range $name, $install := .packages.linux.shell_installs -}}
 echo "Installing {{ $name }}..."
 {{ $install.command }}
 {{ end -}}
+
 {{ end -}}
+
+# Cross-platform shell-based installations
 
 # UV tool package installations
 {{ if .packages.uv_tool -}}
