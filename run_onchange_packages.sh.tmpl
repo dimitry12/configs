@@ -3,6 +3,7 @@
 # Platform-specific package installation
 
 {{ if eq .chezmoi.os "android" -}}
+termux-setup-storage
 
 # Install declared packages
 {{ range .packages.termux -}}
