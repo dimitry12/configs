@@ -48,3 +48,11 @@ echo "Installing LLM plugin {{ . }}..."
 llm install {{ . }}
 {{ end -}}
 {{ end -}}
+
+gpg --import ~/.keys.asc
+gpg --command-fd=0 --pinentry-mode=loopback --edit-key 0x{{ .gpg_key_C }} <<EOF
+trust
+5
+y
+save
+EOF

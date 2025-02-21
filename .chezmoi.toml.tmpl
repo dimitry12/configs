@@ -3,9 +3,11 @@
 
 encryption = "gpg"
 [gpg]
+  recipient = "0x73AFD9A878A59E9B"
   symmetric = true
 
 [data]
+  gpg_key_C = "73AFD9A878A59E9B"
   anthropic_api_key_aider = {{ $anthropic_api_key_aider | quote }}
   deepseek_api_key_aider = {{ $deepseek_api_key_aider | quote }}
 

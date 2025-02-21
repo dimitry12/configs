@@ -3,6 +3,7 @@ packages:
     macports:
       - neovim
       - tmux
+      - gnupg2
   linux:
     ubuntu:
       - neovim
