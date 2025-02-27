@@ -8,17 +8,17 @@ packages:
     - git
     - fzf
     - ripgrep
-    - clang # needed by lazyvim?
+    - clang
     - neovim
     - tmux
     - rust
     - python
     - uv
-    - alacritty
-    - kitty
-    - libxkbcommon
-    - libcanberra
-    - xdotool
+    # - alacritty
+    # - kitty
+    # - libxkbcommon
+    # - libcanberra
+    # - xdotool
     - wget
     - cmake
     - build-essential

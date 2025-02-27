@@ -1,8 +1,12 @@
 llm.txt
 Makefile
 
+{{ if ne .chezmoi.os "android" -}}
+termux.Makefile
+.termux/*
+{{ end }}
 {{ if ne .chezmoi.os "darwin" }}
-./Library/Application\ Support/io.datasette.llm/default_model.txt
+Library/Application\ Support/io.datasette.llm/default_model.txt
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/io.datasette.llm/default_model.txt

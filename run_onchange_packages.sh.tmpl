@@ -64,6 +64,7 @@ llm install {{ . }}
 {{ end -}}
 {{ end -}}
 
+{{ if ne .chezmoi.os "android" -}}
 gpg --import ~/.keys.asc
 gpg --command-fd=0 --pinentry-mode=loopback --edit-key 0x{{ .gpg_key_C }} <<EOF
 trust
@@ -75,4 +76,4 @@ mkdir -p ~/.ssh
 
 gpg --export-ssh-key {{ .gpg_key_A }} > ~/.ssh/gpg_key_A.pub
 chmod 600 ~/.ssh/gpg_key_A.pub
-
+{{ end -}}

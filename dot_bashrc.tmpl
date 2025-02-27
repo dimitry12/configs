@@ -24,14 +24,18 @@ export HISTSIZE=100000                  # big big history
 export HISTFILESIZE=100000              # big big history
 shopt -s histappend                     # append to history, don't overwrite it
 
+{{ if ne .chezmoi.os "android" }}
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 gpg-connect-agent updatestartuptty /bye > /dev/null
+{{ end }}
 
 {{ if eq .chezmoi.os "android" }}
 export UV_PYTHON_PREFERENCE="only-system"
 export PATH="/data/data/com.termux/files/home/.local/bin:$PATH"
+
+eval $(okc-ssh-agent)
 {{ end }}
 {{ if eq .chezmoi.os "darwin" }}
 export PATH=/Library/TeX/texbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/share/dotnet
